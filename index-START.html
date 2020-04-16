@@ -48,6 +48,10 @@
 <script>
 const bands = ['The Lawrence Arms', 'The Alkaline Trio', 'Dillinger Four', 'The Honor System', 'IDLES', 'Tropical Fuck Storm', 'The Afghan Whigs', 'Russian Circles', 'Dakha Brakha', 'Priests', 'Sonic Youth', 'Tim Barry', 'Culture Abuse', 'Drug Church', 'A Perfect Circle'];
 
+function strip(bandName){
+  return bandName.replace(/^(a |an |the)/i, '').trim(); //regex ^="starts with", i=case insensitive  
+}//emd strip function
+
 const sortedBands = bands.sort(function (a, b) {
    if ( a > b) {
      return 1;

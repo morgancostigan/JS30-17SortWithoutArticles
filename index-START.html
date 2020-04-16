@@ -53,11 +53,12 @@ function strip(bandName){
 }//emd strip function
 
 const sortedBands = bands.sort(function (a, b) {
-   if ( strip(a) > strip(b)) { //strip within IF to not modify original data
-     return 1;
-   } else {
-     return -1;
-   }//end function
+  return strip(a) > strip(b) ? 1 : -1; //ternary operator, rather than the IF statement below
+  //  if ( strip(a) > strip(b)) { //strip within IF to not modify original data
+  //    return 1;
+  //  } else {
+  //    return -1;
+  //  }//end IF     //
 });//end const
 
 console.log(sortedBands);

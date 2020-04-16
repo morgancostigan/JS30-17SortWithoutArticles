@@ -52,14 +52,16 @@ function strip(bandName){
   return bandName.replace(/^(a |an |the)/i, '').trim(); //regex ^="starts with", i=case insensitive  
 }//emd strip function
 
-const sortedBands = bands.sort((a, b) => {
-  return strip(a) > strip(b) ? 1 : -1; //ternary operator, rather than the IF statement below
-  //  if ( strip(a) > strip(b)) { //strip within IF to not modify original data
-  //    return 1;
-  //  } else {
-  //    return -1;
-  //  }//end IF     //
-});//end const
+const sortedBands = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1); //this replaces the below function
+
+// const sortedBands = bands.sort((a, b) => {
+//   return strip(a) > strip(b) ? 1 : -1; //ternary operator, rather than the IF statement below
+//   //  if ( strip(a) > strip(b)) { //strip within IF to not modify original data
+//   //    return 1;
+//   //  } else {
+//   //    return -1;
+//   //  }//end IF     //
+// });//end const
 
 console.log(sortedBands);
 

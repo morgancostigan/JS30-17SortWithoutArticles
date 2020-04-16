@@ -46,7 +46,21 @@
   <ul id="bands"></ul>
 
 <script>
-const bands = ['The Lawrence Arms', 'The Alkaline Trio', 'Dillinger Four', 'The Honor System', 'IDLES', 'Tropical Fuck Storm', 'The Afghan Whigs', 'Russian Circles', 'Dakha Brakha', 'Priests', 'Sonic Youth', 'Tim Barry', 'Culture Abuse'];
+const bands = ['The Lawrence Arms', 'The Alkaline Trio', 'Dillinger Four', 'The Honor System', 'IDLES', 'Tropical Fuck Storm', 'The Afghan Whigs', 'Russian Circles', 'Dakha Brakha', 'Priests', 'Sonic Youth', 'Tim Barry', 'Culture Abuse', 'Drug Church', 'A Perfect Circle'];
+
+const sortedBands = bands.sort(function (a, b) {
+   if ( a > b) {
+     return 1;
+   } else {
+     return -1;
+   }//end function
+});//end const
+
+console.log(sortedBands);
+
+
+
+
 
 
 </script>
